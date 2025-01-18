@@ -1,9 +1,49 @@
 <!DOCTYPE html>
+
 <html>
-    <body>
-        <p>ADDING JS AS A SEPARATE FILE</p>
-        <button type="button" onclick="myfunction()">CLICK ME!</button>
-        <p id="demo"></p>
-        <script src="script.js"></script>
-    </body>
+
+<body>
+
+    <h2>JS CLASS</h2>
+
+    <p>How to use classes in js</p>
+
+    <p id="student1"></p>
+
+    <p id="student2"></p>
+
+    <script>
+
+        class student {
+
+            constructor(name, year) {
+
+                this.name = name;
+
+                this.year = year;
+
+            }
+
+            age() {
+
+                let date = new Date();
+
+                return date.getFullyear() - this.year;
+
+            }
+
+        }
+
+        stu = new student("Michael", 2010);
+
+        document.getElementById("student1").innerHTML = "My name is " + stu.name + " I am " + stu.year + " . I am " + stu.age();
+
+        stu2 = new student("Fred", 2009);
+
+        document.getElementById("student2").innerHTML = "My name is " + stu2.name + " I am " + stu2.year + " I am " + stu2.age();
+
+    </script>
+
+</body>
+
 </html>
