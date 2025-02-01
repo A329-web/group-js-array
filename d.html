@@ -1,44 +1,17 @@
-<!DOCTYPE html>
 <html>
-
-<body>
-    <h2> JAVASCRIPT CLASS</h2>
-    <p> How to use JS class</p>
-    <p id="student1"></p>
-    <p id="student2"></p>
-    <p id="student3"></p>
-    <script>
-        class student {
-            constructor(name, year) {
-                this.name = name
-                this.year = year
+    <body>
+        <h2>js async</h2>
+        <h1 id="demo1"></h1>
+        <script>
+            async function add(a,b){
+                let response = await a+b
+                display(response)
             }
 
-            age() {
-                let date = new Date();
-                return date.getFullYear() - this.year;
+            function display(some){
+                document.getElementById("demo1").innerHTML = some
             }
-
-            hobby() {
-                print("My hobby is dancing");
-
-            }
-
-
-        }
-
-        stu = new student("Michael", 2010);
-
-        document.getElementById("student1").innerHTML = "My name is " + stu.name + " I am " + stu.year + " . I am " + stu.age();
-        document.getElementById("student3").innerHTML = " hey! " + stu.hobby();
-
-        stu2 = new student("Fred", 2009);
-
-        document.getElementById("student2").innerHTML = "My name is " + stu2.name + " I am " + stu2.year + " I am " + stu2.age();
-
-
-
-    </script>
-</body>
-
+            add(20,6)
+        </script>
+    </body>
 </html>

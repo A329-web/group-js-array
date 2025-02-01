@@ -1,0 +1,14 @@
+<html>
+
+<body>
+    <h2>CONVERT JS OBJECT</h2>
+    <p id="res"></p>
+    <script>
+        var a = { name: "Riya", age: 12, grade: 7 }
+        var b = JSON.stringify(a)// converted js to json
+        var c = JSON.parse(b)//converted json to js
+        document.getElementById("res").innerHTML = c.name
+    </script>
+</body>
+
+</html>
